@@ -1,6 +1,9 @@
 package jdbc.Mentor.Family;
 
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 import java.util.Scanner;
 
 public class Main {
@@ -8,6 +11,7 @@ public class Main {
     static DbaseHesaplar hesaplar =new DbaseHesaplar();
     static Scanner input=new Scanner(System.in);
     static Scanner inputLN=new Scanner(System.in);
+    static List<String> aylar = new ArrayList<>(Arrays.asList("ocak","subat","martr","nisan","mayis","haziran","temmuz","agustos","eylul","ekim","kasim","aralik"));
 
     public static void main(String[] args) throws InterruptedException {
         menuHesaplar();
