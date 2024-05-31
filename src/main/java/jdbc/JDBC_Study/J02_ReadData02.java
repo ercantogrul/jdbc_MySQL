@@ -18,6 +18,7 @@ public class J02_ReadData02 {
         while (rs1.next()) {
             System.out.printf("%-6d%-20s%-20s%-6d%-20s\n", rs1.getInt(1),rs1.getString(2),
                     rs1.getString(3), rs1.getInt(4),rs1.getString(5));
+
         }
         System.out.println("   ************ task00 ********************************************************     ");
 

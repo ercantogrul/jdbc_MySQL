@@ -139,4 +139,14 @@ public class DbaseHesaplar {
             System.out.println(e.toString());
         }
     }
+
+    public void toplamGelir() throws SQLException {
+        createDatabase();
+        dBaseConnection();
+        budget();
+        String query="select sum(Gelir) as toplam_gelir from hesapbilgileri ";
+        ResultSet rs = statement.executeQuery(query);
+        rs.next();
+        System.out.println(rs.getObject(1));
+    }
 }

@@ -20,6 +20,7 @@ public class J01_ReadData {
         ResultSet rs = statement.executeQuery("select * from talebeler");
         while (rs.next()) {
             System.out.printf("%-6d%-20s%-10s%-6d\n", rs.getInt(1),rs.getString(2), rs.getString(3), rs.getInt(4));
+
         }
 
         System.out.println("   ***   task02   ***   ");

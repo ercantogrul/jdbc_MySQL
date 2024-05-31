@@ -1,6 +1,7 @@
 package jdbc.Mentor.Family;
 
 
+import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -13,8 +14,15 @@ public class Main {
     static Scanner inputLN=new Scanner(System.in);
     static List<String> aylar = new ArrayList<>(Arrays.asList("ocak","subat","martr","nisan","mayis","haziran","temmuz","agustos","eylul","ekim","kasim","aralik"));
 
-    public static void main(String[] args) throws InterruptedException {
+    enum secilecekAylar{
+        OCAK, SUBAT, MART, NISAN, MAYIS, HAZIRAN,TEMMUZ, AGUSTOS, EYLUL,EKIM, KASIM, ARALIK;
+
+    }
+
+    public static void main(String[] args) throws InterruptedException, SQLException {
+      //  hesaplar.toplamGelir();
         menuHesaplar();
+
     }
 
     private static void menuHesaplar() throws InterruptedException {
@@ -70,6 +78,21 @@ public class Main {
                         yeniAy = hesaplar.listData().get(i).getAy();
                     }
                     hesapObj.setAy(yeniAy);
+
+
+//                    if (yeniAy.equalsIgnoreCase("x")) {
+//                            yeniAy = hesaplar.listData().get(i).getAy();
+//                    }else {
+//                        try {
+//                            for (String ay :aylar) if (ay.toLowerCase().contains(yeniAy))
+//                                hesapObj.setAy(yeniAy);
+//                        }catch (Exception e){
+//                            System.out.println("Bu isimde bir ay bulunmamaktadir");
+//                            updateRecord();
+//                        }
+//                    }
+
+
 
                     if (yeniAciklama.equalsIgnoreCase("x")) {
                         yeniAciklama = hesaplar.listData().get(i).getAciklama();
@@ -179,4 +202,7 @@ public class Main {
         }
         menuHesaplar();
     }
+
+
+
 }
