@@ -12,6 +12,7 @@ public class Runner {
        // System.out.println(utilities.list_id());
 
         menu();
+
     }
 
     private static void menu() throws InterruptedException {
