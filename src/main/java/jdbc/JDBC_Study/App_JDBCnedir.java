@@ -82,6 +82,7 @@ artifactid: (PROJEADI):JdbcDersler
       st.close();
       rs.close();
   //her zaman ilk 4 asama ayni....
+
   */
 
 
